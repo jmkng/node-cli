@@ -1,10 +1,10 @@
 /**
- * @file Implement a command that can build a project.
+ * @file Implement a command that can create a new project with some handy defaults.
  */
 
-const name = 'build'
+const name = 'create'
 
-const description = 'build desc goes here'
+const description = 'create desc goes here'
 
 const options = (command) => {
     command
