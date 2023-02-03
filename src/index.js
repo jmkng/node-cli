@@ -3,7 +3,6 @@
  */
 
 import { Command } from 'commander';
-import { common, shared } from './util/cli.js';
 import build from './command/build.js';
 import create from './command/create.js';
 import serve from './command/serve.js';

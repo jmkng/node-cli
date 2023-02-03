@@ -2,8 +2,10 @@
  * @file Implement a command that can generate a content tree on a directory.
  */
 
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { readdirSync, statSync } from 'node:fs';
+import Tree from '../tree/tree.js';
+import walk from '../util/walk.js'
 
 const name = 'tree'
 
@@ -14,13 +16,17 @@ const options = (command) => {
         .action(options => execute(options))
 }
 
-const execute = (argv) => {
-    const files = readdirSync(argv)
+const execute = async (argv) => {
+    const raw = readFileSync(join(argv.dir, 'onyx.json'));
+    const config = JSON.parse(raw);
 
-    for (const file of files) {
-        // create some kind of item
-        // check if ext matches something in config
+    const tree = new Tree(config.tree.map);
+
+    for await (const file of walk(argv.dir)) {
+        tree.absorb(file);
     }
+
+    tree.print();
 }
 
 export default { name, description, options, execute }
