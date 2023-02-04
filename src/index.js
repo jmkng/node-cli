@@ -1,7 +1,3 @@
-/**
- * @file Onyx entry point.
- */
-
 import { Command } from 'commander';
 import build from './command/build.js';
 import create from './command/create.js';
@@ -15,8 +11,8 @@ const main = () => {
 
     // Create global Command instance and set global program information.
     program
-        .name('onyx')
-        .description('onyx description')
+        .name('pkgname')
+        .description('pkgname description')
         .version('0.1.0')
 
     common(program);
@@ -26,7 +22,7 @@ const main = () => {
     // the expected options for the command.
     let request = program;
 
-    // Initialize all Onyx commands on program.
+    // Initialize all Pkgname commands on program.
     for (const n of [build, create, serve]) {
         const command = program.command(n.name)
 

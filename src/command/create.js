@@ -1,10 +1,6 @@
-/**
- * @file Implement a command that can create a new project with some handy defaults.
- */
-
 const name = 'create'
 
-const description = 'create desc goes here'
+const description = ''
 
 const options = (command) => {
     command
@@ -12,7 +8,6 @@ const options = (command) => {
 }
 
 const execute = (argv) => {
-
 }
 
 export default { name, description, options, execute }

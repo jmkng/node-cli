@@ -1,10 +1,6 @@
-/**
- * @file Implement a command that can serve a built project with a local web server.
- */
-
 const name = 'serve'
 
-const description = 'serve desc goes here'
+const description = ''
 
 const options = (command) => {
     command

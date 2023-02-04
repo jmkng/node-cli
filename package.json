@@ -1,20 +1,19 @@
 {
-  "name": "onyx",
+  "name": "pkgname",
   "version": "0.1.0",
   "description": "",
   "main": "./src/index.js",
   "type": "module",
   "bin": {
-    "onyx": "./bin/onyx.js"
+    "pkgname": "./bin/pkgname.js"
   },
   "scripts": {
-    "bin": "./bin/onyx.js"
+    "bin": "./bin/pkgname.js"
   },
   "keywords": [],
-  "author": "Jon Koenig <jkoenig@outlook.com>",
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "commander": "^10.0.0",
-    "handlebars": "^4.7.7"
+    "commander": "^10.0.0"
   }
 }
