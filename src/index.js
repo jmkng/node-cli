@@ -6,7 +6,6 @@ import { Command } from 'commander';
 import build from './command/build.js';
 import create from './command/create.js';
 import serve from './command/serve.js';
-import tree from './command/tree.js';
 
 const main = () => {
     // Raw string value of a requested command, if any.
@@ -28,7 +27,7 @@ const main = () => {
     let request = program;
 
     // Initialize all Onyx commands on program.
-    for (const n of [build, create, serve, tree]) {
+    for (const n of [build, create, serve]) {
         const command = program.command(n.name)
 
         common(command);
